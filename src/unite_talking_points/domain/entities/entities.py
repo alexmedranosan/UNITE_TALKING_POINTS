@@ -4,7 +4,7 @@ from typing import List
 
 class Document:
     def __init__(self, content: str, _id: str = None, origin: str = None, title: str = None, author: str = None,
-                 keywords: List[str] = None, date_created: datetime.date = None, date_modified: datetime.date = None,
+                 keywords: List[str] = None, date_created: datetime = None, date_modified: datetime = None,
                  source: str = None):
         """
         This class represents a document.
