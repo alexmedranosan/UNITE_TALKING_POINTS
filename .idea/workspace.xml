@@ -5,18 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2cbf3c5e-29c9-4980-af4d-a62b1d657afb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/unite_talking_points/utils/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/unite_talking_points/utils/directory_utils/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/unite_talking_points/utils/directory_utils/directory_utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/unite_talking_points/utils/nlp_utils/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/unite_talking_points/utils/nlp_utils/load_documents.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/unite_talking_points/utils/nlp_utils/nlp_utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/unite_talking_points/utils/nlp_utils/vectorize_documents.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/UNITE_TALKING_POINTS.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/UNITE_TALKING_POINTS.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unite_talking_points/domain/entities/entities.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/unite_talking_points/domain/entities/entities.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unite_talking_points/utils/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/unite_talking_points/domain/repositories/repositories.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unite_talking_points/utils/nlp_utils/load_documents.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/unite_talking_points/utils/nlp_utils/load_documents.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unite_talking_points/utils/nlp_utils/vectorize_documents.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/unite_talking_points/utils/nlp_utils/vectorize_documents.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,14 +34,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feature/repository",
-    "last_opened_file_path": "C:/Users/amedrano/Desktop/UN/UNITE_TALKING_POINTS",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/repository&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/amedrano/Desktop/UN/UNITE_TALKING_POINTS&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\amedrano\Desktop\UN\UNITE_TALKING_POINTS\src\unite_talking_points\domain\value_objects" />
@@ -58,9 +50,9 @@
       <recent name="C:\Users\amedrano\Desktop\UN\UNITE_TALKING_POINTS\src\unite_talking_points\domain\events" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\amedrano\Desktop\UN\UNITE_TALKING_POINTS" />
       <recent name="C:\Users\amedrano\Desktop\UN\UNITE_TALKING_POINTS\src\unite_talking_points\utils\nlp" />
       <recent name="C:\Users\amedrano\Desktop\UN\UNITE_TALKING_POINTS\src\unite_talking_points\utils\documents_utils" />
-      <recent name="C:\Users\amedrano\Desktop\UN\UNITE_TALKING_POINTS" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

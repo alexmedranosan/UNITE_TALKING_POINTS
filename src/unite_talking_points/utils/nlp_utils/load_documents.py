@@ -99,15 +99,3 @@ def load_documents(directory: str) -> List[Document]:
             print(f"WARNING: Empty document found for: {path}")
 
     return documents
-
-
-def main():
-    # Set up the documents directory
-    directory = r"C:\Users\amedrano\Desktop\UN\UNITE_TALKING_POINTS\data\documents\raw"
-
-    documents = load_documents(directory)
-    print(documents)
-
-
-if __name__ == "__main__":
-    main()
