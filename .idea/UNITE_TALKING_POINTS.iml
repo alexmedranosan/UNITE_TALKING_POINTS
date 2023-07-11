@@ -5,4 +5,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
+  <component name="PackageRequirementsSettings">
+    <option name="requirementsPath" value="C:\Users\amedrano\Desktop\UN\UNITE_TALKING_POINTS\requirements.txt" />
+  </component>
 </module>
