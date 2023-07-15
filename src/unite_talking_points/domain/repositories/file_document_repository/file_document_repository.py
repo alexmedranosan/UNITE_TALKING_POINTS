@@ -1,17 +1,12 @@
 import os
 import pickle
-from abc import ABC
 from typing import Dict, Any
 
 import scipy as sp
 
+from src.unite_talking_points.domain.repositories.document_repository import AbstractDocumentRepository
 from src.unite_talking_points.utils.nlp_utils.load_documents import load_documents
 from src.unite_talking_points.utils.nlp_utils.vectorize_documents import vectorize_tfidf
-
-
-class AbstractDocumentRepository(ABC):
-    def __init__(self):
-        pass
 
 
 class FileDocumentRepository(AbstractDocumentRepository):
@@ -23,7 +18,7 @@ class FileDocumentRepository(AbstractDocumentRepository):
                 <data_path>/raw/doc1.pdf
                 <data_path>/raw/doc2.word
                 <data_path>/raw/...
-        Then, documents.pkl and vectors.npz will be created in the data_folder to make the start faster.
+        Then, documents.pkl, vectorizer.pkl and vectors.npz will be created in the data_folder to make the start faster.
         """
         super().__init__()
 
@@ -32,10 +27,12 @@ class FileDocumentRepository(AbstractDocumentRepository):
         self.raw_documents_path = os.path.join(self.data_path, 'raw')
         self.vectors_path = os.path.join(self.data_path, 'vectors.npz')
         self.documents_path = os.path.join(self.data_path, 'documents.pkl')
+        self.vectorizer_path = os.path.join(self.data_path, 'vectorizer.pkl')
 
         # Define the documents and vectors
         self.documents = []
         self.vectors = None
+        self.vectorizer = None
 
     # Set up functions
     def setup_documents(self):
@@ -53,7 +50,7 @@ class FileDocumentRepository(AbstractDocumentRepository):
         :return:
         """
         # Vectorize the documents
-        self.vectors = vectorize_tfidf(self.documents, tfidf_args)
+        self.vectors, self.vectorizer = vectorize_tfidf(self.documents, tfidf_args)
 
     def setup(self, tfidf_args: Dict[str, Any] = None):
         """
@@ -81,7 +78,12 @@ class FileDocumentRepository(AbstractDocumentRepository):
         Save the tfidf vectors into a scipy sparse matrix
         :return:
         """
+        # Save the vectors
         sp.sparse.save_npz(self.vectors_path, self.vectors)
+
+        # Save the vectorizer
+        with open(self.vectorizer_path, "wb") as file:
+            pickle.dump(self.vectorizer, file)
 
     def save(self):
         """
@@ -108,7 +110,12 @@ class FileDocumentRepository(AbstractDocumentRepository):
         Load the tfidf vectors from a scipy sparse matrix
         :return:
         """
+        # Load the vectors
         self.vectors = sp.sparse.load_npz(self.vectors_path)
+
+        # Load the vectorizer
+        with open(self.vectorizer_path, "rb") as file:
+            self.vectorizer = pickle.load(file)
 
     def load(self):
         """
