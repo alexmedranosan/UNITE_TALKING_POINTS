@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2cbf3c5e-29c9-4980-af4d-a62b1d657afb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unite_talking_points/utils/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/unite_talking_points/domain/repositories/repositories.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unite_talking_points/utils/nlp_utils/load_documents.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/unite_talking_points/utils/nlp_utils/load_documents.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unite_talking_points/domain/repositories/repositories.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/unite_talking_points/domain/repositories/repositories.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/unite_talking_points/utils/nlp_utils/vectorize_documents.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/unite_talking_points/utils/nlp_utils/vectorize_documents.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

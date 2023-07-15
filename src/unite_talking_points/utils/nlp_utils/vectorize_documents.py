@@ -1,12 +1,9 @@
-import pickle
 from typing import List, Dict, Any
 
-import scipy as sp
 import spacy
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 from src.unite_talking_points.domain.entities.entities import Document
-from src.unite_talking_points.utils.nlp_utils.load_documents import load_documents
 from src.unite_talking_points.utils.nlp_utils.nlp_utils import lemmatize_spacy
 
 
@@ -17,6 +14,7 @@ def vectorize_tfidf(documents: List[Document],
     :param documents: List[Document] A list of documents to be vectorized.
     :param tfidf_args: Dict[str, Any] TF-IDF scikit-learn parameters.
     :return: tfidf_matrix Sparse matrix of TF-IDF values.
+             tfidf_vectorizer TF-IDF sklearn vectorizer.
     """
     # Preprocess and extract the lemmas from each document
     if tfidf_args is None:
@@ -28,4 +26,4 @@ def vectorize_tfidf(documents: List[Document],
     tfidf_vectorizer = TfidfVectorizer(**tfidf_args)
     tfidf_matrix = tfidf_vectorizer.fit_transform(lemmatized_documents)
 
-    return tfidf_matrix
+    return tfidf_matrix, tfidf_vectorizer
