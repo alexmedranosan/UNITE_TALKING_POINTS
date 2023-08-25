@@ -28,6 +28,9 @@ class Document:
         self.date_modified = date_modified
         self.source = source
 
+    def __len__(self):
+        return len(self.content)
+
 
 class GeneratedDocument(Document):
     """

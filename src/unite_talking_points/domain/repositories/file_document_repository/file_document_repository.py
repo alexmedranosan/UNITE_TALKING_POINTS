@@ -127,3 +127,26 @@ class FileDocumentRepository(AbstractDocumentRepository):
 
         # Load the vectors
         self.load_vectors()
+
+    def __len__(self):
+        return len(self.documents)
+
+    def __bool__(self):
+        output = False
+
+        if len(self) > 0:
+            return True
+
+        return output
+
+    def __getitem__(self, index):
+        if isinstance(index, int):
+            output = self.documents[index]
+        elif isinstance(index, list):
+            output = [self.documents[i] for i in index]
+        elif isinstance(index, slice):
+            start, stop, step = index.indices(len(self.documents))
+            output = [self.documents[i] for i in range(start, stop, step)]
+        else:
+            raise TypeError("Index must be an integer or a slice")
+        return output

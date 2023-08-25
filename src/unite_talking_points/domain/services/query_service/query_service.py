@@ -46,4 +46,4 @@ class QueryService(Service):
         This includes returning the sorted indexes.
         """
         # Return the sorted indexes
-        return self.sorted_indexes
+        return list(self.sorted_indexes)
