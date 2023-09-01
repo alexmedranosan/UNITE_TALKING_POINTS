@@ -162,3 +162,6 @@ data/
 config/config.ini
 .idea/workspace.xml
 .idea/dictionaries/amedrano.xml
+
+# Mac file
+**/.DS_Store
