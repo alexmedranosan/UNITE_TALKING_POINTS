@@ -1,7 +1,8 @@
-from abc import ABC, abstractmethod
+from abc import abstractmethod
+from pipelines.pipeline import Pipeline
 
 
-class Service(ABC):
+class Service(Pipeline):
     @abstractmethod
     def _pre_process(self):
         pass
@@ -13,10 +14,3 @@ class Service(ABC):
     @abstractmethod
     def _post_process(self):
         pass
-
-    def run(self):
-        self._pre_process()
-        self._process()
-        result = self._post_process()
-
-        return result

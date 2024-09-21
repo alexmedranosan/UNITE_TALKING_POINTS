@@ -55,7 +55,7 @@ class ConfigLoader:
 
             raise FileNotFoundError(message)
 
-    def load_config(self) -> configparser.ConfigParser:
+    def load_config(self, current_directory_is_root=False) -> configparser.ConfigParser:
         """
         Load the configuration file.
 
@@ -66,7 +66,10 @@ class ConfigLoader:
         current_directory = os.getcwd()
 
         # Find project root directory
-        project_root_directory = self.find_project_root(current_directory)
+        if current_directory_is_root:
+            project_root_directory = current_directory
+        else:
+            project_root_directory = self.find_project_root(current_directory)
 
         # Check if config directory exists
         config_directory = os.path.join(project_root_directory, 'config')

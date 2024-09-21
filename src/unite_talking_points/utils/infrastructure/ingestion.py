@@ -4,7 +4,7 @@ import PyPDF2
 import docx
 
 from src.unite_talking_points.domain.entities.entities import Document
-from src.unite_talking_points.utils.directory_utils.directory_utils import get_file_paths
+from src.unite_talking_points.utils.directory.directory_utils import get_file_paths
 
 
 def load_pdf_document(path: str) -> Document:

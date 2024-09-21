@@ -4,7 +4,7 @@ import spacy
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 from src.unite_talking_points.domain.entities.entities import Document
-from src.unite_talking_points.utils.nlp_utils.nlp_utils import lemmatize_spacy
+from src.unite_talking_points.utils.nlp.misc import lemmatize_spacy
 
 
 def vectorize_tfidf(documents: List[Document],

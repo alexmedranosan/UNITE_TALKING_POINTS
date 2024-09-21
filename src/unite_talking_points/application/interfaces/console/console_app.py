@@ -5,7 +5,7 @@ from src.unite_talking_points.domain.services.query_service.query_service import
 from src.unite_talking_points.domain.services.summary_service.summary_service import SummaryService
 from src.unite_talking_points.utils.application.interfaces.console_utils import print_word_art, \
     print_document_query_results
-from src.unite_talking_points.utils.configuration_utils.config_loader import ConfigLoader
+from src.unite_talking_points.utils.config.config_loader import ConfigLoader
 
 
 def main():

@@ -5,8 +5,8 @@ from typing import Dict, Any
 import scipy as sp
 
 from src.unite_talking_points.domain.repositories.document_repository import AbstractDocumentRepository
-from src.unite_talking_points.utils.nlp_utils.load_documents import load_documents
-from src.unite_talking_points.utils.nlp_utils.vectorize_documents import vectorize_tfidf
+from utils.infrastructure.ingestion import load_documents
+from src.unite_talking_points.utils.nlp.vectorization import vectorize_tfidf
 
 
 class FileDocumentRepository(AbstractDocumentRepository):
